@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="sign_in.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <div class="wel"><h1>welcome</h1>
+            <p>What do you want to do ??</p>
+            </div>
+            <div class="btns">
+                <button type="button" id="btnin">Sign In</button>
+                <button type="button" id="btnup">Sign Up</button>
+            </div>
+        </div>
+        <form id="signform" method="post">
+            <h2>Sign Up</h2>
+            <input onkeydown="hidfill()" type="text" id="username" placeholder="user name" >
+            
+            <input onkeydown="hidfill()" type="email" id="mail" placeholder="email">
+            <div class="ps">
+            <input onkeydown="hidfill()" type="password"  id="passw" placeholder="password">
+            <button type="button" id="passbtn"><i class="fa-regular fa-eye"></i></button>
+           </div>
+           <div class="ps">
+            <input type="password" onblur="checkpassword()" id="conf_pass" placeholder="conferm password">
+            <button type="button" id="conbtn"><i class="fa-regular fa-eye"></i></button>
+           </div>
+            <div class="gen">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+           </div>
+            <div class="boxs">
+            <label for="terms">Terms</label>
+            <input type="checkbox" name="terms" id="terms">
+            <label for="conditions">Conditions</label>
+            <input type="checkbox" name="cond" id="conditions">
+           </div>
+             <button type="button" onclick="submit1()" id="submit">Sign Up</button>
+             <button type="button" onclick="backpage()" class="back">Back</button>
+             <p id="usererror">All fields is require</p>
+        </form>
+        <form  id='login' action="" method="post">
+            <h2>Sign In</h2>
+            <input onkeydown="hidfill()"  type="text" id="userin" placeholder="user name" >
+            <div class="psin">
+                <input onkeydown="hidfill()" type="password"  id="passin" placeholder="password">
+                <button id="passbtnin"><i class="fa-regular fa-eye"></i></button> 
+               </div>
+               <button type="button" onclick="submitin1()" id="submitin">Sign In</button>
+               <button type="button" onclick="backpage()" class="back">Back</button>
+               <p id="usererror2">user name is require</p>
+
+        </form>
+    </div> 
+    <script src="sign_in.js"></script>
+</body>
+</html>
